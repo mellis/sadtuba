@@ -26,9 +26,11 @@ body {
 </head>
 <body>
 <script>
+var sadtuba = new Audio('sadtuba.mp3');
 function play() {
-    var sadtuba = new Audio('sadtuba.mp3');
-    sadtuba.play();
+    if (sadtuba.paused) {
+        sadtuba.play();
+    }
 }
 </script>
 <div class="play" onclick="play()" />
